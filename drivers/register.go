@@ -7,7 +7,7 @@ import (
 	"github.com/rancher/kontainer-engine/drivers/import"
 	"github.com/rancher/kontainer-engine/drivers/rke"
 	"github.com/rancher/kontainer-engine/types"
-	"kontainer-engine/drivers/ics"
+	"kontainer-engine/drivers/iks"
 )
 
 var Drivers map[string]types.Driver
@@ -19,6 +19,6 @@ func init() {
 		"eks":    eks.NewDriver(),
 		"import": kubeimport.NewDriver(),
 		"rke":    rke.NewDriver(),
-		"ics":    ics.NewDriver(),
+		"iks":    iks.NewDriver(),
 	}
 }
